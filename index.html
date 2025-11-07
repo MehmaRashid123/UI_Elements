@@ -7,10 +7,55 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <section class="hero">
+    <section id="auth-section" class="auth-container">
+      <!-- Login Form -->
+      <div id="login-form" class="auth-form">
+        <h2 class="auth-title">Login</h2>
+        <input type="email" id="login-email" placeholder="Email" class="auth-input" />
+        <input type="password" id="login-password" placeholder="Password" class="auth-input" />
+        <a href="#" id="forgot-password-link" class="forgot-password">Forgot Password?</a>
+        <div class="auth-buttons">
+          <button id="login-button" class="btn btn-primary">Login</button>
+        </div>
+        <p class="auth-switch">Don't have an account? <a href="#" id="show-signup">Sign Up</a></p>
+      </div>
+
+      <!-- Signup Form -->
+      <div id="signup-form" class="auth-form" style="display: none;">
+        <h2 class="auth-title">Sign Up</h2>
+        <input type="email" id="signup-email" placeholder="Email" class="auth-input" />
+        <input type="password" id="signup-password" placeholder="Password" class="auth-input" />
+        <div class="auth-buttons">
+          <button id="signup-button" class="btn btn-primary">Sign Up</button>
+        </div>
+        <p class="auth-switch">Already have an account? <a href="#" id="show-login">Login</a></p>
+      </div>
+
+      <!-- Forgot Password Form -->
+      <div id="forgot-password-form" class="auth-form" style="display: none;">
+        <h2 class="auth-title">Reset Password</h2>
+        <input type="email" id="reset-email" placeholder="Enter your email" class="auth-input" />
+        <div class="auth-buttons">
+          <button id="reset-password-button" class="btn btn-primary">Send Reset Link</button>
+        </div>
+        <p class="auth-switch"><a href="#" id="back-to-login">Back to Login</a></p>
+      </div>
+
+      <!-- Update Password Form -->
+      <div id="update-password-form" class="auth-form" style="display: none;">
+        <h2 class="auth-title">Update Password</h2>
+        <input type="password" id="new-password" placeholder="Enter new password" class="auth-input" />
+        <div class="auth-buttons">
+          <button id="update-password-button" class="btn btn-primary">Update Password</button>
+        </div>
+      </div>
+    </section>
+
+  <section id="main-content" class="hero" style="display: none;">
     <div class="hero-content">
       <h1 class="hero-title">
         <span class="title-word">Beautiful</span>
@@ -23,6 +68,7 @@
       <div class="hero-buttons">
         <button class="btn btn-primary">Browse Components</button>
         <button class="btn btn-secondary">Read Blog</button>
+        <button id="logout-button" class="btn btn-accent">Logout</button>
       </div>
     </div>
     <div class="hero-animation">
@@ -31,6 +77,9 @@
       <div class="floating-box"></div>
     </div>
     </section>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script src="config.js"></script>
     <script src="script.js"></script>
   </body>
   </html>  
