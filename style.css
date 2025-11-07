@@ -198,7 +198,8 @@ body {
   }
 
   .hero-animation {
-    display: none; /* Hide animation on smaller screens for better performance */
+    /* The animation is now enabled on smaller screens. */
+    /* If you experience performance issues, you can re-add 'display: none;' */
   }
 
   .hero-buttons {
@@ -213,6 +214,21 @@ body {
 
   .hero-subtitle {
     font-size: 1rem;
+  }
+
+  .floating-box {
+    width: 100px;
+    height: 100px;
+  }
+
+  .floating-box:nth-child(2) {
+    width: 80px;
+    height: 80px;
+  }
+
+  .floating-box:nth-child(3) {
+    width: 60px;
+    height: 60px;
   }
 }
 
