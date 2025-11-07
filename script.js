@@ -1,5 +1,5 @@
 const { createClient } = supabase;
-const _supabase = createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+const _supabase = createClient("__SUPABASE_URL__", "__SUPABASE_ANON_KEY__");
 
 const authSection = document.getElementById('auth-section');
 const mainContent = document.getElementById('main-content');
