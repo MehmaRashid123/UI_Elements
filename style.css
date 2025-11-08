@@ -22,13 +22,17 @@ body {
 
 /* Hero Section */
 .hero {
+  display: block;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 6rem 2rem;
+}
+
+.hero-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 4rem;
   align-items: center;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 6rem 2rem;
 }
 
 .hero-content {

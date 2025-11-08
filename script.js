@@ -92,7 +92,7 @@ const auth = {
                 formManager.show('loginForm');
             } else {
                 ui.authSection.style.display = 'none';
-                ui.mainContent.style.display = 'grid';
+                ui.mainContent.style.display = 'block';
             }
         });
     },
@@ -165,7 +165,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     const { data: { session } } = await auth._supabase.auth.getSession();
     if (session) {
         ui.authSection.style.display = 'none';
-        ui.mainContent.style.display = 'grid';
+        ui.mainContent.style.display = 'block';
     } else {
         ui.authSection.style.display = 'flex';
         ui.mainContent.style.display = 'none';
