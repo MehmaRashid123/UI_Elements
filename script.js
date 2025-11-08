@@ -56,22 +56,6 @@ ui.backToLogin.addEventListener('click', (e) => {
   formManager.show('loginForm');
 });
 
-const showToast = (text, type = 'success') => {
-  const backgroundColor = type === 'success' ? 'linear-gradient(to right, #00b09b, #96c93d)' : 'linear-gradient(to right, #ff5f6d, #ffc371)';
-  Toastify({
-    text: text,
-    duration: 3000,
-    close: true,
-    gravity: "top", // `top` or `bottom`
-    position: "right", // `left`, `center` or `right`
-    stopOnFocus: true, // Prevents dismissing of toast on hover
-    hideProgressBar: false,
-    style: {
-      background: backgroundColor,
-    },
-  }).showToast();
-};
-
 const auth = {
     _supabase: createClient(SUPABASE_URL, SUPABASE_ANON_KEY),
 
@@ -81,13 +65,13 @@ const auth = {
             const params = new URLSearchParams(hash.substring(1));
             const accessToken = params.get('access_token');
             if (!accessToken) {
-                console.error('Recovery token not found in URL');
+                swal("Error", "Recovery token not found in URL", "error");
                 return;
             }
 
             const { error } = await this._supabase.auth.setSession({ access_token: accessToken, refresh_token: '' });
             if(error){
-                console.error('Error setting session from recovery token:', error);
+                swal("Error", error.message, "error");
                 return;
             }
 
@@ -108,7 +92,7 @@ const auth = {
                 formManager.show('loginForm');
             } else {
                 ui.authSection.style.display = 'none';
-                ui.mainContent.style.display = 'grid';
+                ui.mainContent.style.display = 'block';
             }
         });
     },
@@ -118,9 +102,9 @@ const auth = {
         const password = ui.loginPasswordInput.value;
         const { data, error } = await this._supabase.auth.signInWithPassword({ email, password });
         if (error) {
-            showToast(error.message, 'error');
+            swal("Error", error.message, "error");
         } else {
-            showToast('Logged in successfully!');
+            swal("Success", "Logged in successfully!", "success");
         }
     },
 
@@ -129,9 +113,9 @@ const auth = {
         const password = ui.signupPasswordInput.value;
         const { data, error } = await this._supabase.auth.signUp({ email, password });
         if (error) {
-            showToast(error.message, 'error');
+            swal("Error", error.message, "error");
         } else {
-            showToast('Check your email for a confirmation link!');
+            swal("Success", "Check your email for a confirmation link!", "success");
             formManager.show('loginForm');
         }
     },
@@ -139,7 +123,9 @@ const auth = {
     async logout() {
         const { error } = await this._supabase.auth.signOut();
         if (error) {
-            showToast(error.message, 'error');
+            swal("Error", error.message, "error");
+        } else {
+            swal("Success", "Logged out successfully!", "success");
         }
     },
 
@@ -150,9 +136,9 @@ const auth = {
         });
 
         if (error) {
-            showToast(error.message, 'error');
+            swal("Error", error.message, "error");
         } else {
-            showToast('Check your email for a password reset link!');
+            swal("Success", "Check your email for a password reset link!", "success");
         }
     },
 
@@ -160,9 +146,9 @@ const auth = {
         const newPassword = ui.newPasswordInput.value;
         const { data, error } = await this._supabase.auth.updateUser({ password: newPassword });
         if (error) {
-            showToast(error.message, 'error');
+            swal("Error", error.message, "error");
         } else {
-            showToast('Password updated successfully! You can now log in.');
+            swal("Success", "Password updated successfully! You can now log in.", "success");
             window.location.hash = '';
             formManager.show('loginForm');
         }
@@ -179,7 +165,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     const { data: { session } } = await auth._supabase.auth.getSession();
     if (session) {
         ui.authSection.style.display = 'none';
-        ui.mainContent.style.display = 'grid';
+        ui.mainContent.style.display = 'block';
     } else {
         ui.authSection.style.display = 'flex';
         ui.mainContent.style.display = 'none';
