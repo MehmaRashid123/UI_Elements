@@ -197,10 +197,7 @@ body {
     text-align: center;
   }
 
-  .hero-animation {
-    /* The animation is now enabled on smaller screens. */
-    /* If you experience performance issues, you can re-add 'display: none;' */
-  }
+  
 
   .hero-buttons {
     justify-content: center;
@@ -744,4 +741,146 @@ body{
 }
 
 
+
+
+
+ 
+/* --------------- Footer ------------------------ */
+ 
+  .footer {
+  background-color: rgba(219, 94, 48, 0.986);
+  color: white;
+  padding: 40px 60px;
+  text-align: left;
+  width: 100%;
+}
+/* Logo styling */
+.logo {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: white;
+}
+
+.logo .ui {
+  background: linear-gradient(90deg, #ff8c00, #ff4500);
+  background-clip: text;
+ -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.footer-container { 
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+
+
+
+
+/* 🔹 Footer Columns */
+.footer-column h4 {
+  font-size: 16px; /* Increased font */
+  letter-spacing: 1px;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-column ul li {
+  margin-bottom: 10px;
+}
+
+.footer-column ul li a {
+  text-decoration: none;
+  color: white;
+  font-size: 15px; /* Slightly bigger */
+  transition: color 0.3s;
+}
+
+.footer-column ul li a:hover {
+  color: white;
+}
+
+/* 🔹 Social Icons */
+.social-icons a {
+  margin-right: 10px;
+  font-size: 18px; /* Increased */
+  color: white;
+  transition: color 0.3s;
+}
+
+.social-icons a:hover {
+  color: #3d5c3d;
+}
+
+/* 🔹 Subscribe Box */
+.subscribe-box {
+  margin-top: 15px;
+}
+
+.subscribe-box input {
+  padding: 10px 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 180px; /* Slightly wider */
+  margin-right: 5px;
+}
+
+.subscribe-box button {
+  background-color: #3d5c3d;
+  color: white;
+  border: none;
+  padding: 10px 14px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  font-size: 14px;
+}
+
+.subscribe-box button:hover {
+  background-color: #2e442e;
+}
+
+/* 🔹 Bottom Footer */
+.footer-bottom {
+  text-align: center;
+  font-size: 14px; /* Increased slightly */
+  color: white;
+  margin-top: 25px;
+}
+
+.footer-bottom a {
+  color: white;
+  text-decoration: none;
+  margin: 0 5px;
+  font-size: 14px;
+}
+
+.footer-bottom a:hover {
+  text-decoration: underline;
+}
+
+/* 🔹 Responsive */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+  }
+
+  .subscribe-box input {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .subscribe-box button {
+    width: 100%;
+  }
+}
 
