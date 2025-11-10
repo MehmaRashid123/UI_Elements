@@ -9,6 +9,34 @@ const blogPosts = [
     image: "https://images.unsplash.com/photo-1620712943543-285f7266c8da?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
   },
   {
+    title: "The Rise of AI in Web Development",
+    date: "October 26, 2025",
+    author: "Jane Doe",
+    excerpt: "Artificial intelligence is revolutionizing the way we build websites. From automated testing to AI-powered design tools, the future of web development is here.",
+    image: "https://images.unsplash.com/photo-1620712943543-285f7266c8da?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+  },
+  {
+    title: "The Rise of AI in Web Development",
+    date: "October 26, 2025",
+    author: "Jane Doe",
+    excerpt: "Artificial intelligence is revolutionizing the way we build websites. From automated testing to AI-powered design tools, the future of web development is here.",
+    image: "https://images.unsplash.com/photo-1620712943543-285f7266c8da?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+  },
+  {
+    title: "The Rise of AI in Web Development",
+    date: "October 26, 2025",
+    author: "Jane Doe",
+    excerpt: "Artificial intelligence is revolutionizing the way we build websites. From automated testing to AI-powered design tools, the future of web development is here.",
+    image: "https://images.unsplash.com/photo-1620712943543-285f7266c8da?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+  },
+  {
+    title: "The Rise of AI in Web Development",
+    date: "October 26, 2025",
+    author: "Jane Doe",
+    excerpt: "Artificial intelligence is revolutionizing the way we build websites. From automated testing to AI-powered design tools, the future of web development is here.",
+    image: "https://images.unsplash.com/photo-1620712943543-285f7266c8da?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+  },
+  {
     title: "A Deep Dive into Modern CSS",
     date: "October 22, 2025",
     author: "John Smith",
@@ -66,6 +94,7 @@ function createBlogCard(post) {
 }
 
 const blogContainer = document.getElementById('blog-container');
+const loadMoreButton = document.getElementById('load-more');
 
 function displayBlogPosts(posts) {
     blogContainer.innerHTML = '';
@@ -107,8 +136,6 @@ clearFiltersButton.addEventListener('click', () => {
     postsToShow = 3;
     displayBlogPosts(blogPosts);
 });
-
-const loadMoreButton = document.getElementById('load-more');
 
 loadMoreButton.addEventListener('click', () => {
     postsToShow += 3;

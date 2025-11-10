@@ -108,8 +108,9 @@
         </p>
         <div class="hero-buttons">
           <button class="btn btn-primary">Browse Components</button>
-          <a href="blog.html">          <button class="btn btn-secondary">Read Blog</button>
-</a>
+          <a href="blog.html"><button class="btn btn-secondary">Read Blog</button></a>
+          
+          <button id="logout-button" class="btn btn-accent">Logout</button>
         </div>
       </div>
       <div class="hero-animation">
@@ -164,7 +165,37 @@
  <div class="a-blog-section">
   <h1 class="a-blog-title">Latest from Blog</h1>
 
-  <div class="a-blog-container" id="home-blog-container">
+  <div class="a-blog-container">
+
+    <!-- Blog Card 1 -->
+    <div class="a-blog-card">
+      <div class="blog-image img1"><img src="theme.png" ></div>
+      <div class="a-blog-content">
+        <span class="a-tag">UI UX</span>
+        <h3>Dark Mode, Light Mode... What's Next? Adaptive UI Themes for 2025</h3>
+        <p>Explore the evolution of user interfaces and adaptive themes shaping the next generation of UI.</p>
+      </div>
+    </div>
+
+    <!-- Blog Card 2 -->
+    <div class="a-blog-card">
+      <div class="blog-image img2"><img src="tw_css.png" ></div>
+      <div class="a-blog-content">
+        <span class="a-tag">CSS</span>
+        <h3>Setting Up Tailwind CSS in React and Next.js</h3>
+        <p>A simple walkthrough on integrating Tailwind CSS efficiently with your frontend workflow.</p>
+      </div>
+    </div>
+
+    <!-- Blog Card 3 -->
+    <div class="a-blog-card">
+      <div class="blog-image img3"><img src="design.png" ></div>
+      <div class="a-blog-content">
+        <span class="a-tag">UI UX</span>
+        <h3>Bridging the Design-Code Gap (For Real This Time)</h3>
+        <p>How modern tools and developer-designer collaboration are closing the design-to-code divide.</p>
+      </div>
+    </div>
 
   </div>
 </div>
@@ -232,8 +263,6 @@
     
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
     <script src="config.js"></script>
-    <script src="blog.js"></script>
-    <script src="home.js"></script>
     <script src="script.js"></script>
   </body>
   </html>  

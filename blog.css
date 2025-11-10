@@ -2,7 +2,7 @@
 
 #blog-container {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 2rem;
   padding: 2rem;
   
@@ -10,18 +10,16 @@
 
 .blog-card {
   background-color: #fff;
-  border-radius: 10px; /* Slightly less rounded */
-  box-shadow: 0 4px 12px rgba(0,0,0,0.08), 0 8px 24px rgba(0,0,0,0.08); /* More pronounced shadow */
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
   overflow: hidden;
-  transition: transform 0.3s ease, box-shadow 0.3s ease, border-left-color 0.3s ease;
-  border-left: 5px solid #ff6600; /* Orange accent remains */
-  border: none; /* Remove the subtle grey border, rely on shadow */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-left: 5px solid #ff6600; /* Orange accent */
 }
 
 .blog-card:hover {
-  transform: translateY(-8px) scale(1.02); /* Slightly less aggressive lift and scale */
-  box-shadow: 0 10px 20px rgba(0,0,0,0.15), 0 20px 40px rgba(0,0,0,0.15); /* Stronger shadow on hover */
-  border-left-color: #ff8533; /* Brighter orange on hover */
+  transform: translateY(-10px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
 }
 
 .blog-card img {
@@ -36,16 +34,15 @@
 
 .blog-card-content h3 {
   margin-top: 0;
-  margin-bottom: 0.75rem;
-  font-size: 1.4rem;
-  font-weight: 700;
-  color: #222;
+  margin-bottom: 0.5rem;
+  font-size: 1.5rem;
+  color: #333;
 }
 
 .blog-meta {
-  font-size: 0.85rem;
-  color: #666;
-  margin-bottom: 1.25rem;
+  font-size: 0.8rem;
+  color: #777;
+  margin-bottom: 1rem;
 }
 
 .read-more {
@@ -120,12 +117,12 @@
 }
 
 #load-more {
-    padding: 1rem 2.5rem; /* Increased padding */
+    padding: 0.8rem 2rem;
     background-color: #ff6600;
     color: #fff;
     text-decoration: none;
     border-radius: 25px;
-    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease; /* Added transform and box-shadow to transition */
+    transition: background-color 0.3s ease;
     font-weight: bold;
     border: none;
     cursor: pointer;
@@ -133,6 +130,4 @@
 
 #load-more:hover {
     background-color: #e65c00;
-    transform: translateY(-3px) scale(1.05); /* Subtle lift and pulse effect */
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Added box-shadow on hover */
 }
