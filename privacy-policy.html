@@ -1,0 +1,335 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Privacy Policy — UIElement</title>
+<style>
+  :root {
+    --primary: #ff6a00;
+    --secondary: #ffb800;
+    --accent: #ff0055;
+    --dark-bg: #0a0a0f;
+    --card-bg: #111118;
+    --text: #ffffff;
+    --text-muted: #a1a1aa;
+  }
+
+  /* NEW RULE — link color */
+  a { color: #ffb800 !important; }
+
+  body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: var(--dark-bg);
+    color: var(--text);
+    line-height: 1.6;
+    padding: 40px 16px;
+  }
+
+  .container {
+    max-width: 980px;
+    margin: 0 auto;
+    background: var(--card-bg);
+    padding: 36px;
+    border-radius: 16px;
+    box-shadow: 0 0 40px rgba(255, 106, 0, 0.3);
+  }
+
+  header .brand {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 24px;
+  }
+
+  .logo {
+    width: 60px;
+    height: 60px;
+    border-radius: 12px;
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 20px;
+    color: var(--text);
+    box-shadow: 0 0 12px var(--primary), 0 0 20px var(--secondary);
+  }
+
+  h1 {margin:0; font-size:28px;}
+  .meta {color: var(--text-muted); font-size:14px; margin-top:4px;}
+
+  nav.toc {
+    background: #111117;
+    padding: 18px;
+    border-radius: 12px;
+    margin: 20px 0;
+    border: 1px solid #33333f;
+  }
+
+  nav.toc h2 {margin:0 0 10px; font-size:16px;}
+  nav.toc ul {padding-left:18px; margin:0; color: var(--text-muted);}
+  nav.toc a {text-decoration:none;}
+  nav.toc a:hover {text-decoration: underline;}
+
+  section {margin-bottom:28px;}
+  h2 {font-size:22px; margin-bottom:10px;}
+  h3 {font-size:16px; margin:10px 0; color: var(--accent);}
+  p, li {margin:8px 0;}
+  ul {margin:6px 0 12px 20px;}
+  .muted {color: var(--text-muted);}
+  .code {background:#ffb800; padding:10px; border-radius:8px; font-family: monospace; color: var(--primary); font-size:13px;}
+
+  footer {
+    margin-top:40px;
+    background:#0f0f14;
+    padding:40px 20px;
+    border-radius:12px;
+    box-shadow: 0 0 20px rgba(255,106,0,0.2);
+  }
+
+  .footer-container {
+    display:flex;
+    flex-wrap:wrap;
+    justify-content: space-between;
+    gap:24px;
+  }
+
+  .footer-column {flex:1; min-width:180px;}
+  .footer-column h4 {color:var(--primary); margin-bottom:12px; font-size:14px;}
+  .footer-column a {text-decoration:none;}
+  .footer-column a:hover {text-decoration: underline;}
+
+  .subscribe input[type="email"] {
+    padding:10px 14px;
+    border-radius:8px;
+    border:none;
+    background:#1a1a22;
+    color:var(--text);
+    width:180px;
+    outline:none;
+    box-shadow: inset 0 0 6px #000;
+    transition: 0.3s;
+  }
+  .subscribe input[type="email"]:focus {
+    box-shadow: 0 0 12px var(--primary);
+  }
+  .subscribe button {
+    padding:10px 16px;
+    margin-left:8px;
+    border:none;
+    border-radius:8px;
+    background:var(--primary);
+    color:#fff;
+    cursor:pointer;
+    box-shadow: 0 0 12px var(--primary);
+    transition:0.3s;
+  }
+  .subscribe button:hover {box-shadow: 0 0 20px var(--secondary);}
+
+  .footer-bottom {
+    border-top:1px solid #33333f;
+    margin-top:24px;
+    padding-top:12px;
+    font-size:13px;
+    color: var(--text-muted);
+    text-align:center;
+  }
+
+  @media (max-width:640px){
+    body{padding:20px;}
+    .container{padding:24px;}
+    .logo{width:50px; height:50px; font-size:18px;}
+    .footer-container {flex-direction: column;}
+  }
+</style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">
+        <div class="logo">UI</div>
+        <div>
+          <h1>Privacy Policy — UIElement</h1>
+          <div class="meta">Design • Develop • Create — <strong>Last Updated:</strong> 15 November 2025</div>
+        </div>
+      </div>
+    </header>
+
+    <p>Welcome to <strong>UIElement</strong> (“we”, “us”, or “our”). This Privacy Policy explains how we collect, use, disclose, and protect your personal information.</p>
+
+    <nav class="toc">
+      <h2>Table of contents</h2>
+      <ul>
+        <li><a href="#definitions">1. Definitions</a></li>
+        <li><a href="#what-we-collect">2. What information we collect</a></li>
+        <li><a href="#how-we-use">3. How we use your information</a></li>
+        <li><a href="#legal-basis">4. Legal bases for processing</a></li>
+        <li><a href="#sharing">5. When and with whom we share your info</a></li>
+        <li><a href="#retention">6. Data retention</a></li>
+        <li><a href="#security">7. Security</a></li>
+        <li><a href="#international">8. International transfers</a></li>
+        <li><a href="#children">9. Children’s privacy</a></li>
+        <li><a href="#rights">10. Your rights</a></li>
+        <li><a href="#cookies">11. Cookies & tracking</a></li>
+        <li><a href="#third-party">12. Third-party links</a></li>
+        <li><a href="#changes">13. Changes to this policy</a></li>
+        <li><a href="#contact">14. Contact information</a></li>
+      </ul>
+    </nav>
+
+    <section id="definitions">
+      <h2>1. Definitions</h2>
+      <p><strong>Personal Data:</strong> any information that identifies or can reasonably identify a natural person (e.g. name, email).</p>
+      <p><strong>Usage Data:</strong> technical and aggregated data collected automatically when you use our site (e.g. IP address, browser type).</p>
+      <p><strong>Cookies:</strong> small files placed on your device to remember preferences and support analytics.</p>
+      <p><strong>Service Providers:</strong> third-party companies that help us operate the website or provide services on our behalf.</p>
+    </section>
+
+    <section id="what-we-collect">
+      <h2 id="collect-heading">2. What information we collect</h2>
+      <h3>2.1 Personal information you provide</h3>
+      <p>We collect information you voluntarily give us when you:</p>
+      <ul>
+        <li>Create an account or edit your profile</li>
+        <li>Contact support or submit forms</li>
+        <li>Subscribe to newsletters</li>
+      </ul>
+      <p>Examples include:</p>
+      <ul>
+        <li>Full name (if provided)</li>
+        <li>Email address</li>
+        <li>Phone number</li>
+        <li>Postal address (if provided)</li>
+        <li>Profile details or messages you submit</li>
+      </ul>
+      <h3>2.2 Information collected automatically</h3>
+      <ul>
+        <li>IP address</li>
+        <li>Device and browser information</li>
+        <li>Operating system and screen size</li>
+        <li>Referring pages, pages visited, timestamps</li>
+        <li>Usage and performance diagnostics</li>
+      </ul>
+      <h3>2.3 Payment information</h3>
+      <p>Payment processing handled by third-party processors (e.g., Stripe). We do not store full card numbers.</p>
+      <h3>2.4 Social login data</h3>
+      <p>If you sign in using a social account, we may receive allowed profile info.</p>
+    </section>
+
+    <section id="how-we-use">
+      <h2 id="use-heading">3. How we use your information</h2>
+      <h3>Service delivery</h3>
+      <p>To provide, operate, and improve our website and services.</p>
+      <h3>Communications</h3>
+      <p>To respond to inquiries, updates, and marketing (with consent).</p>
+      <h3>Analytics & improvements</h3>
+      <p>Analyze usage patterns and improve experience.</p>
+      <h3>Security & fraud prevention</h3>
+      <p>Protect users and services, prevent abuse, and comply with law.</p>
+    </section>
+
+    <!-- 4. Legal bases -->
+    <section id="legal-basis" aria-labelledby="legal-heading">
+      <h2 id="legal-heading">4. Legal bases for processing</h2>
+      <ul>
+        <li><strong>Contract:</strong> necessary to provide services.</li>
+        <li><strong>Consent:</strong> with your permission.</li>
+        <li><strong>Legitimate interests:</strong> security, analytics, improvements.</li>
+        <li><strong>Legal obligations:</strong> when required by law.</li>
+      </ul>
+    </section>
+
+    <!-- 5. Sharing -->
+    <section id="sharing" aria-labelledby="sharing-heading">
+      <h2 id="sharing-heading">5. When and with whom we share your information</h2>
+      <h3>Service providers</h3>
+      <p>Trusted third-party providers performing services on our behalf.</p>
+      <h3>Legal and safety reasons</h3>
+      <p>Comply with law, protect rights and safety.</p>
+      <h3>Business transfers</h3>
+      <p>Data may be transferred in mergers/acquisitions.</p>
+      <p><em>We do not sell your personal information.</em></p>
+    </section>
+
+    <!-- 6. Retention -->
+    <section id="retention" aria-labelledby="retention-heading">
+      <h2 id="retention-heading">6. Data retention</h2>
+      <p>We retain personal data only as long as necessary or required by law. Unneeded data is securely deleted or anonymized.</p>
+    </section>
+
+    <!-- 7. Security -->
+    <section id="security" aria-labelledby="security-heading">
+      <h2 id="security-heading">7. Data security</h2>
+      <p>We maintain reasonable safeguards (HTTPS, access control, monitoring). No system is 100% secure; protect your credentials.</p>
+    </section>
+
+    <!-- 8. International transfers -->
+    <section id="international" aria-labelledby="international-heading">
+      <h2 id="international-heading">8. International transfers</h2>
+      <p>Your data may be transferred to jurisdictions with different data protection laws; we ensure proper safeguards.</p>
+    </section>
+
+    <!-- 9. Children -->
+    <section id="children" aria-labelledby="children-heading">
+      <h2 id="children-heading">9. Children’s privacy</h2>
+      <p>Services not for children under 13. Contact us to remove any data collected inadvertently.</p>
+    </section>
+
+     <!-- 10. Rights -->
+    <section id="rights" aria-labelledby="rights-heading">
+      <h2 id="rights-heading">10. Your rights</h2>
+      <ul>
+        <li>Access your data</li>
+        <li>Correct inaccuracies</li>
+        <li>Request deletion/restriction</li>
+        <li>Object or withdraw consent</li>
+        <li>Data portability</li>
+      </ul>
+      <p>Contact: <a href="mailto:support@example.com">support@example.com</a></p>
+    </section>
+
+    <!-- 11. Cookies -->
+    <section id="cookies" aria-labelledby="cookies-heading">
+      <h2 id="cookies-heading">11. Cookies & tracking technologies</h2>
+      <p>We use cookies, pixels, and similar tech for sessions, analytics, personalization. Manage via browser settings.</p>
+      <p class="muted"><a href="/cookies">Dedicated Cookie Policy</a></p>
+    </section>
+
+    <!-- 12. Third-party -->
+    <section id="third-party" aria-labelledby="thirdparty-heading">
+      <h2 id="thirdparty-heading">12. Third-party links</h2>
+      <p>We are not responsible for third-party privacy practices. Review their policies before sharing info.</p>
+    </section>
+
+    <!-- 13. Changes -->
+    <section id="changes" aria-labelledby="changes-heading">
+      <h2 id="changes-heading">13. Changes to this policy</h2>
+      <p>We may update the policy. Check this page regularly.</p>
+    </section>
+
+    
+    <!-- 14. Contact -->
+    <section id="contact" aria-labelledby="contact-heading">
+      <h2 id="contact-heading">14. Contact information</h2>
+      <div class="contact">
+        <div class="item">
+          <strong>Phone</strong>
+          <div class="muted">+92 300 0000000</div>
+        </div>
+        <div class="item">
+          <strong>Email</strong>
+          <div class="muted"><a href="mailto:support@example.com">support@example.com</a></div>
+        </div>
+        <div class="item">
+          <strong>Address</strong>
+          <div class="muted">Karachi, Pakistan</div>
+        </div>
+      </div>
+      <p style="margin-top:10px;"><strong>UIElement</strong> — Design • Develop • Create</p>
+    </section>
+
+  
+</body>
+</html>
